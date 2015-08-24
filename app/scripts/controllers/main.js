@@ -8,10 +8,12 @@
  * Controller of the insurioApp
  */
 angular.module('insurioApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $location) {
+  	 // initiate scope user
+     $scope.user = { age: null, work: null, life: null, risk: null, vehicle: null};
+
+     // on form submit
+     $scope.submitTesting = function(){
+     	$location.path("ergebnis");
+     }
   });

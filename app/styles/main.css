@@ -7,77 +7,122 @@
 
 body {
   padding: 0;
+  background-color:#0b3771;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+}
+.clearfix{
+  clear:both;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+
+.header{
+  padding:30px 0px 20px 0px;
+  text-align:center;
+}
+#logo{
+  width:180px;
+  height:auto;
+  margin-bottom:30px;
+}
+h1{
+  font-weight:lighter;
+  font-size:28px;
+}
+.wrapper{
+  width:100%;
+  max-width: 770px;
+  padding:0 15px;
+  box-sizing:border-box;
+  margin:0 auto;
+}
+.progress{
+  text-align:center;
+}
+.prog{
+  width:150px;
+  display:inline-block;
+  margin-left:15px;
+  margin-right:15px;
+
+}
+.prog h2{
+  margin-bottom:0;
+  font-weight:lighter;
+  color:#bdbcbc;
+}
+.prog h3{
+  margin-top:0;
+  font-size:14px;
+  font-weight:lighter;
+  color:#bdbcbc;
+}
+.progLine{
+  width:100%;
+  height:1px;
+  background-color:white;
+}
+.container{
+  padding-top:70px;
+}
+input[type="submit"]{
+  background-color:transparent;
+  border:1px solid white;
+  border-radius:2px;
+  padding:5px 25px;
+  color:white;
+  font-size:14px;
+  cursor:pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:lighter;
+  -webkit-transition: background-color 500ms ease-in-out;
+    -moz-transition: background-color 500ms ease-in-out;
+    -o-transition: background-color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
+    -webkit-transition: border-color 500ms ease-in-out;
+    -moz-transition: border-color 500ms ease-in-out;
+    -o-transition: border-color 500ms ease-in-out;
+    transition: border-color 500ms ease-in-out;
+}
+input[type="submit"]:hover{
+  background-color:white;
+  color:black;
+}
+select{
+  font-family: 'Open Sans', sans-serif;
+  background-color:white;
+  height:30px;
+  margin-bottom:8px;
+  border:0;
+  border-radius:2px;
+  width:250px;
+  font-size:14px;
+  -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+   text-indent:10px;
+background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  background-color:white;
+  color:#0b3771;
+  padding:5px 0px;
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+.footer a{
+  color:#0b3771;
+  text-decoration: none;
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.footer a:hover{
+  color:#000;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+  
 }

@@ -11,6 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -20,34 +21,37 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="wrapper">
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+      <img src="../images/logo.png" alt="Insurio Logo" id="logo">
+      <h1>Welche Versicherung brauchst du wirklich?</h2>
+    </div>
 
-            <a class="navbar-brand" href="#/">insurio</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="progress">
+      <div class="prog" id="prog1">
+        <h2>Schritt 1</h2>
+        <h3>Deine Angaben</h3>
       </div>
+      <div class="prog" id="prog2">
+        <h2>Schritt 2</h2>
+        <h3>Dein Ergebnis</h3>
+      </div>
+      <div class="prog" id="prog3">
+        <h2>Schritt 3</h2>
+        <h3>Deine Offerte</h3>
+      </div>
+      <div class="clearfix"></div>
+      <div class="progLine"></div>
     </div>
 
     <div class="container">
     <div ng-view=""></div>
     </div>
 
+  </div>
+
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+      &copy; 2015 insurio &#124; <a href="#" title="Impressum">Impressum</a>
     </div>
 
 
@@ -77,7 +81,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/ergebnis.js"></script>
         <!-- endbuild -->
 </body>
 </html>
