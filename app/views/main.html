@@ -2,11 +2,11 @@
 <form name="userForm" ng-submit="submitTesting()" class="form">
   <select ng-model="user.age" required>
     <option value="">Wie alt bist du?</option>
-    <option value="16-20">16 – 20</option>
-    <option value="21-30">21 – 30</option>
-    <option value="31-50">31 – 50</option>
-    <option value="51-60">51 – 60</option>
-    <option value="61-99">61 – 99</option>
+    <option value="1">16 – 20</option>
+    <option value="2">21 – 30</option>
+    <option value="3">31 – 50</option>
+    <option value="4">51 – 60</option>
+    <option value="5">61 – 99</option>
   </select>
   <br>
   <select ng-model="user.work" required>
@@ -37,8 +37,8 @@
   <br>
   <select ng-model="user.vehicle" required>
     <option value="">Besitzt du ein Fahrzeug?</option>
-    <option value="1">Nein</option>
-    <option value="2">Klar</option>
+    <option value="1">Ja</option>
+    <option value="2">Nein</option>
   </select>
   <input ng-disabled="userForm.$invalid" type="submit" value="Jetzt testen">
 </form>

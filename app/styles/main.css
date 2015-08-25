@@ -15,6 +15,9 @@ body {
   clear:both;
 }
 
+.active *{
+  color:white !important;
+}
 
 .header{
   padding:30px 0px 20px 0px;

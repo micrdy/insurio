@@ -27,16 +27,16 @@
       <h1>Welche Versicherung brauchst du wirklich?</h2>
     </div>
 
-    <div class="progress">
-      <div class="prog" id="prog1">
+    <div ng-controller="ProgressCtrl" class="progress">
+      <div class="prog" ng-class="active1 ? 'active' : 'notActive'" id="prog1">
         <h2>Schritt 1</h2>
         <h3>Deine Angaben</h3>
       </div>
-      <div class="prog" id="prog2">
+      <div class="prog" ng-class="active2 ? 'active' : 'notActive'" id="prog2">
         <h2>Schritt 2</h2>
         <h3>Dein Ergebnis</h3>
       </div>
-      <div class="prog" id="prog3">
+      <div class="prog" ng-class="active3 ? 'active' : 'notActive'" id="prog3">
         <h2>Schritt 3</h2>
         <h3>Deine Offerte</h3>
       </div>
@@ -82,6 +82,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/ergebnis.js"></script>
+        <script src="scripts/services/insurances.js"></script>
+        <script src="scripts/controllers/progress.js"></script>
         <!-- endbuild -->
 </body>
 </html>
