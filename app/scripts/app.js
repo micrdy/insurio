@@ -29,6 +29,11 @@ angular
         controller: 'ErgebnisCtrl',
         controllerAs: 'ergebnis'
       })
+      .when('/anfrage', {
+        templateUrl: 'views/anfrage.html',
+        controller: 'AnfrageCtrl',
+        controllerAs: 'anfrage'
+      })
       .otherwise({
         redirectTo: '/'
       });

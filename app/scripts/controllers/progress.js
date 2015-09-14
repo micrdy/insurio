@@ -19,7 +19,7 @@
  			$scope.active1 = 1; 
  		}else if(currentPath == "/ergebnis"){
  			$scope.active2 = 1;
- 		}else if(currentPath == "/offerte"){
+ 		}else if(currentPath == "/anfrage"){
  			$scope.active3 = 1; 
  		}
  	});

@@ -11,6 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -29,16 +30,19 @@
 
     <div ng-controller="ProgressCtrl" class="progress">
       <div class="prog" ng-class="active1 ? 'active' : 'notActive'" id="prog1">
-        <h2>Schritt 1</h2>
+        <h2>Schritt <span>1</span></h2>
         <h3>Deine Angaben</h3>
+        <div class="progCircle"></div>
       </div>
       <div class="prog" ng-class="active2 ? 'active' : 'notActive'" id="prog2">
-        <h2>Schritt 2</h2>
+        <h2>Schritt <span>2</span></h2>
         <h3>Dein Ergebnis</h3>
+        <div class="progCircle"></div>
       </div>
       <div class="prog" ng-class="active3 ? 'active' : 'notActive'" id="prog3">
-        <h2>Schritt 3</h2>
+        <h2>Schritt <span>3</span></h2>
         <h3>Deine Offerte</h3>
+        <div class="progCircle"></div>
       </div>
       <div class="clearfix"></div>
       <div class="progLine"></div>
@@ -84,6 +88,7 @@
         <script src="scripts/controllers/ergebnis.js"></script>
         <script src="scripts/services/insurances.js"></script>
         <script src="scripts/controllers/progress.js"></script>
+        <script src="scripts/controllers/anfrage.js"></script>
         <!-- endbuild -->
 </body>
 </html>

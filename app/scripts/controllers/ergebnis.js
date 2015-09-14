@@ -8,9 +8,23 @@
  * Controller of the insurioApp
  */
 angular.module('insurioApp')
-  .controller('ErgebnisCtrl', function ($scope, $rootScope, Insurances) {
+  .controller('ErgebnisCtrl', function ($scope, $rootScope, Insurances, $timeout, $location) {
 
+  	$scope.hideLoading = true;
   	// get insurances
-    var insurances = JSON.parse(localStorage.getItem("insurances"));
-    console.log(insurances);
+
+  	$scope.goBack = function(){
+  		$location.path("main");;
+  	}
+
+  	$scope.anfrage = function(){
+  		$location.path("anfrage");
+  	}
+  	
+    var values = JSON.parse(localStorage.getItem("values"));
+    console.log(values);
+
+    $timeout(function(){
+    	$scope.hideLoading = false;
+    }, 1000); 
   });	
