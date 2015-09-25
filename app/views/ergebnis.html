@@ -22,41 +22,25 @@
 <div ng-hide="hideLoading">
 	<div class="mustHaves">
 		<h2>Must have's</h2>
+		<div ng-repeat="must in mustPrint" class="item">
+			<h3><i class="fa {{must.icon}}"></i> {{must.name}}</h3>
+			<p>{{must.text}}</p>
+			<p class="mehr"><i class="fa fa-angle-down"></i>&nbsp; mehr Infos zur {{must.name}}</p>
+		</div>
+	</div>
 
-		<div class="item">
-			<h3>Haftpflichtversicherung</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-				eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-				montes, nascetur ridiculus mus. Donec quam felis, ultec, pellentesque eu.</p>
-				<p class="mehr"><i class="fa fa-angle-down"></i>&nbsp; mehr Infos zur Haftpflichtversicherung</p>
-				
-			</div>
+	<div class="spacer"></div>
 
-
-			<div class="item">
-				<h3>Unfallversicherung</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-					eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-					montes, nascetur ridiculus mus. Donec quam felis, ultec, pellentesque eu.</p>
-					<p class="mehr"><i class="fa fa-angle-down"></i>&nbsp; mehr Infos zur Unfallversicherung</p>
-				</div>
-
-
-			</div>
-			<div class="spacer"></div>
-			<div class="niceToHaves">
-				<h2>Nice to have's</h2>
-				<div class="item">
-
-					<h3>Unfallversicherung</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-						eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-						montes, nascetur ridiculus mus. Donec quam felis, ultec, pellentesque eu.</p>
-						<p class="mehr"><i class="fa fa-angle-down"></i>&nbsp; mehr Infos zur Unfallversicherung</p>
-					</div>
-				</div>
-
-				<a class="button buttonLeft" ng-click="goBack()" title="Zurück zur Übersicht"><i class="fa fa-angle-left"></i> &nbsp;Zurück</a>
-				<a class="button buttonRight" ng-click="anfrage()" title="Offerte stellen"><i class="fa fa-envelope-o"></i> &nbsp;Angebote einholen</a>
-				<div class="clearfix"></div> 
-			</div>
+	<div class="niceToHaves">
+		<h2>Nice to have's</h2>
+		<div ng-repeat="nice in nicePrint" class="item">
+			<h3><i class="fa {{nice.icon}}"></i> {{nice.name}}</h3>
+			<p>{{nice.text}}</p>
+			<p class="mehr"><i class="fa fa-angle-down"></i>&nbsp; mehr Infos zur {{nice.name}}</p>
+		</div>
+	</div>
+<br>
+		<a class="button buttonLeft" ng-click="goBack()" title="Zurück zur Übersicht"><i class="fa fa-angle-left"></i> &nbsp;Zurück</a>
+		<a class="button buttonRight" ng-click="anfrage()" title="Offerte stellen"><i class="fa fa-envelope-o"></i> &nbsp;Angebote einholen</a>
+		<div class="clearfix"></div>
+	</div>

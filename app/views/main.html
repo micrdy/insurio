@@ -1,56 +1,64 @@
-
-<div class="left">
 <form name="userForm" ng-submit="submitTesting()" class="form">
-  <select name="age" ng-model="user.age" ng-class="{inputOk: userForm.age.$dirty}" required>
-    <option value="">Wie alt bist du?</option>
-    <option value="1">16 – 20</option>
-    <option value="2">21 – 30</option>
-    <option value="3">31 – 50</option>
-    <option value="4">51 – 60</option>
-    <option value="5">61 – 99</option>
-  </select>
-  <br>
-  <select name="work" ng-model="user.work" ng-class="{inputOk: userForm.work.$dirty}" required>
-    <option value="">Dein Berufsstand</option>
-    <option value="1">Schüler</option>
-    <option value="2">Student</option>
-    <option value="3">Angestellter</option>
-    <option value="4">Selbstständig</option>
-    <option value="5">Rentner</option>
-  </select>
-  <br>
-  <select name="life" ng-model="user.life" ng-class="{inputOk: userForm.life.$dirty}" required>
-    <option value="">Deine Lebenssituation</option>
-    <option value="1">Ledig, keine Kinder</option>
-    <option value="2">Ledig, Kind / Kinder</option>
-    <option value="3">Verheiratet, keine Kinder</option>
-    <option value="4">Verheiratet, Kind / Kinder</option>
-    <option value="5">Getrennt Lebend</option>
-    <option value="6">Verwitwet</option>
-  </select>
-  <br>
-  <select name="risk" ng-model="user.risk" ng-class="{inputOk: userForm.risk.$dirty}" required>
-    <option value="">Wie risikofreudig bist du?</option>
-    <option value="1">Ich habe bock auf Risiko</option>
-    <option value="2">Naja, geht so...</option>
-    <option value="3">Auf keinen Fall ein Risiko!</option>
-  </select>
-  <br>
-  <select name="car" ng-model="user.vehicle" ng-class="{inputOk: userForm.car.$dirty}" required>
-    <option value="">Besitzt du ein Fahrzeug?</option>
-    <option value="1">Ja</option>
-    <option value="2">Nein</option>
-  </select>
+
+  <div class="left">
+    <select id="age" name="age" ng-model="user.age" ng-class="{inputOk: userForm.age.$dirty}" ng-options="o for o in years" required>
+      <option value="">Dein Geburtsjahr</option>
+    </select>
+    <br>
+    <select name="life" ng-model="user.life" ng-class="{inputOk: userForm.life.$dirty}" required>
+      <option value="">Deine Lebenssituation</option>
+      <option value="1">Single</option>
+      <option value="2">Ehe</option>
+      <option value="3">Konkubinat</option>
+      <option value="4">Eingetragene Partnerschaft</option>
+      <option value="5">Alleinerziehend</option>
+      <option value="6">Familie mit Kindern</option>
+    </select>
+    <br>
+    <select name="work" ng-model="user.work" ng-class="{inputOk: userForm.work.$dirty}" required>
+      <option value="">Dein Berufsstand</option>
+      <option value="1">In Ausbildung</option>
+      <option value="2">Angestellt</option>
+      <option value="3">Selbstständig</option>
+      <option value="4">Nicht erwerbstätig / Hausfrau</option>
+    </select>
+    <br>
+  </div>
+
+  <div class="right">
+    <div class="text"><p>Das ist ein Blintext und hat keine Bedeutung</p></div>
+    <img id="facebook" src="../images/facebook-icon.png" alt="Find us on Facebook">
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+  <hr style="margin-top:15px">
+  <div class="left">
+    <h3>Welches Lebensziel hast du?</h3>
+    <input type="checkbox" name="familie" ng-model="user.goal.familie"> Zukunft der Familie sichern<br>
+    <input type="checkbox" name="wohneigentum" ng-model="user.goal.wohneigentum"> Wohneigentum erwerben<br>
+    <input type="checkbox" name="steuern" ng-model="user.goal.steuern"> Weniger Steuern zahlen<br>
+    <input type="checkbox" name="vermoegen" ng-model="user.goal.vermoegen"> Vermögen aufbauen<br>
+    <input type="checkbox" name="eigentum" ng-model="user.goal.eigentum"> Eigentum schützen<br>
+    <input type="checkbox" name="selbststaendig" ng-model="user.goal.selbststaendig"> Selbstständige Tätigkeit<br>
+    <input type="checkbox" name="alter" ng-model="user.goal.alter"> Sorgenfrei im Alter<br>
+    <br>
+  </div>
+
+  <div class="right">
+    <h3>Besitzt du ein Fahrzeug?</h3>
+    <input type="checkbox" name="velo" ng-model="user.vehicle.velo"> Velo<br>
+    <input type="checkbox" name="roller" ng-model="user.vehicle.roller"> Roller<br>
+    <input type="checkbox" name="motorrad" ng-model="user.vehicle.motorrad"> Motorrad<br>
+    <input type="checkbox" name="auto" ng-model="user.vehicle.auto"> Auto<br>
+    <input type="checkbox" name="boot" ng-model="user.vehicle.boot"> Boot<br>
+  </div>
+  <div class="clearfix"></div>
   <input type="submit" value="Jetzt testen" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()">
   <div ng-show="formIsOk" class="bubble">
-      Bitte wähle zuerst alle Felder aus.
+    Bitte wähle zuerst alle Felder aus.
   </div>
+</div>
 </form>
-</div>
 
-<div class="right">
-  <div class="text"><p>Das ist ein Blintext und hat keine Bedeutung</p></div>
-  <img id="facebook" src="../images/facebook-icon.png" alt="Find us on Facebook">
-  <div class="clearfix"></div>
-</div>
+
 <div class="clearfix"></div>

@@ -1,37 +1,42 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name insurioApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the insurioApp
- */
- angular.module('insurioApp')
- .controller('MainCtrl', function ($scope, $location) {
-  
-    // initiate scope user
-    $scope.user = { age: null, work: null, life: null, risk: null, vehicle: null};
+* @ngdoc function
+* @name insurioApp.controller:MainCtrl
+* @description
+* # MainCtrl
+* Controller of the insurioApp
+*/
+angular.module('insurioApp')
+.controller('MainCtrl', function ($scope, $location, $localStorage) {
 
-    $scope.showPopover = function() {
-      if(!$scope.userForm.$valid){
-        $scope.formIsOk = true;
-      }
-    };
+  // populate age select
+  $scope.years = [];
+  var currentYear = new Date().getFullYear();
+  for (var i = currentYear; i > currentYear - 100; i--) {
+    $scope.years.push(i - 1);
+  }
+  // initiate scope user
+  $scope.user = { age: null, life: null, work: null, goal: null, vehicle: null};
 
-    $scope.hidePopover = function () {
-      if(!$scope.userForm.$valid){
-        $scope.formIsOk = false;
-      }
-    }; 
-     // on form submit
-     $scope.submitTesting = function(){
+  $scope.showPopover = function() {
+    if(!$scope.userForm.$valid){
+      $scope.formIsOk = true;
+    }
+  };
 
-     	// save input data to localStorage
-       var values = {alter: $scope.user.age, work: $scope.user.work, life: $scope.user.life, risk: $scope.user.risk, vehicle: $scope.user.vehicle};
-       localStorage.setItem("values", JSON.stringify(values));
+  $scope.hidePopover = function () {
+    if(!$scope.userForm.$valid){
+      $scope.formIsOk = false;
+    }
+  };
+  // on form submit
+  $scope.submitTesting = function(){
 
-     	// redirect
-     	$location.path("ergebnis");
-     }
-   });
+    // save input data to localStorage
+    $localStorage.user = $scope.user;
+
+    // redirect
+    $location.path("ergebnis");
+  }
+});
